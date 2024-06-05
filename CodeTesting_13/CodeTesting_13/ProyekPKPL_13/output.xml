@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0rc3 (Python 3.12.3 on win32)" generated="2024-05-31T18:31:29.524963" rpa="false" schemaversion="5">
+<suite id="s1" name="LogOut TC" source="C:\Users\Administrator\PycharmProjects\ProyekPKPL_13\LogOut_TC.robot">
+<test id="s1-t1" name="AdminLogin" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:29.782433" level="INFO">Opening browser 'Edge' to base url 'http://127.0.0.1:8000/dashboard'.</msg>
+<arg>${URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-31T18:31:29.782433" elapsed="4.856891"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-31T18:31:34.640669" elapsed="0.004132"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:34.647212" level="INFO">Typing text 'dsiahaan581@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T18:31:34.645863" elapsed="0.259535"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:34.906395" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-05-31T18:31:34.940326" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T18:31:34.905398" elapsed="0.093113"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:34.999508" level="INFO">Clicking button '//*[@id="contactForm"]/div[3]/button'.</msg>
+<arg>//*[@id="contactForm"]/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T18:31:34.999508" elapsed="3.214715"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:38.447327" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-31T18:31:38.215626" elapsed="0.231701"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-31T18:31:38.448319" level="INFO">"Admin login completed. Proceed to update profile."</msg>
+<arg>"Admin login completed. Proceed to update profile."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-31T18:31:38.448319" elapsed="0.000997"/>
+</kw>
+<doc>Test untuk login ke aplikasi sebagai admin</doc>
+<status status="PASS" start="2024-05-31T18:31:29.780440" elapsed="8.668876"/>
+</test>
+<test id="s1-t2" name="Logout" line="21">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:38.454299" level="INFO">Clicking element 'xpath=//nav//div[contains(text(), 'Daniel Siahaan')]'.</msg>
+<arg>xpath=//nav//div[contains(text(), 'Daniel Siahaan')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T18:31:38.453304" elapsed="0.124431"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:38.579727" level="INFO">Clicking link 'xpath=//a[text()='Log Out']'.</msg>
+<arg>xpath=//a[text()='Log Out']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T18:31:38.579727" elapsed="2.939297"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-31T18:31:41.902766" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-31T18:31:41.520021" elapsed="0.383742"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-31T18:31:41.904760" level="INFO">"User logged out successfully."</msg>
+<arg>"User logged out successfully."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-31T18:31:41.903763" elapsed="0.000997"/>
+</kw>
+<doc>Test untuk logout dari aplikasi</doc>
+<status status="PASS" start="2024-05-31T18:31:38.451309" elapsed="3.453451"/>
+</test>
+<test id="s1-t3" name="Close Browser" line="33">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-31T18:31:41.906754" elapsed="2.259408"/>
+</kw>
+<doc>Menutup browser secara manual</doc>
+<status status="PASS" start="2024-05-31T18:31:41.905756" elapsed="2.261415"/>
+</test>
+<status status="PASS" start="2024-05-31T18:31:29.527859" elapsed="14.642309"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="LogOut TC">LogOut TC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
